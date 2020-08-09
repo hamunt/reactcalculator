@@ -1,0 +1,103 @@
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  background: linear-gradient(to right, #476b1e, #4d946b);
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(4,17vw);
+  grid-template-rows: 30px 80px 60px 60px 60px 60px 60px;
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 10px;
+  background: rgba(210, 221, 226, 0.548);
+  margin: 20px 20px 0 20px;
+  width: max-content;
+  justify-content: center;
+  align-content: center;
+}
+.number{
+  grid-row: 3/8;
+  grid-column: 1/4;
+}
+#name{
+  grid-row: 1/2;
+  grid-column: 1/5;
+  text-align: center;
+  font-size: 1.5em;
+}
+button{
+  border-radius: 25%;
+  outline: none;
+}
+button:hover{
+  background: cadetblue;
+  
+}
+#screen{
+  grid-row: 2/3;
+  grid-column: 1/5;
+  background: white;
+  text-align: end;
+  padding: 10px 10px 10px 10px;
+  font-size: 1.5em;
+  overflow: hidden;
+  background: rgb(205, 245, 153);
+}
+
+#clear{
+  grid-row: 3/4;
+  grid-column: 1/2;
+  background: rgb(238, 111, 111);
+}
+#root{
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+#square{
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+#divide{
+  grid-row: 3/4;
+  grid-column: 4/5;
+}
+#multiply{
+  grid-area: 4/4/5/5;
+}
+#sub{
+  grid-area: 5/4/6/5;
+}
+#sum{
+  grid-area: 6/4/7/5;
+}
+#calculate{
+  grid-area: 7/4/8/5;
+  background: rgb(80, 236, 80);
+}
+#cancel{
+  grid-area: 7/1/8/2;
+  background: rgb(233, 222, 69);
+}
+[data-operation],[data-calculate],[data-special-operation]{
+  color: blue;
+  font-size: 1.5em;
+}
+
+/*Numbers*/
+#decimal{
+  grid-area: 7/3/8/4;
+}
+
+@media screen and (min-width: 600px){
+  .container{
+      grid-template-columns: repeat(4,70px);
+      grid-template-rows: 30px 120px repeat(5,60px);
+      margin: 40px 0px 0px 25%;
+  }
+  #screen{
+      padding: 20px 20px 20px 20px;
+  }
+}
