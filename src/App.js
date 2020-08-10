@@ -122,6 +122,8 @@ class Calculator extends React.Component{
       }
   }
   calculate(event){
+        //disable click if current operand is empty
+        if(this.state.currentOperand === ""){return}
         //disregard the results if the user doesnt type an operator first
         let currentOperandStr = this.state.currentOperand.toString().charAt(0);
         if(currentOperandStr !== '+' && currentOperandStr !== '-' && currentOperandStr !== '/' && currentOperandStr !== '*'){
