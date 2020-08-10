@@ -31,6 +31,7 @@ body{
 button{
   border-radius: 25%;
   outline: none;
+  border: none;
 }
 button:hover{
   background: cadetblue;
