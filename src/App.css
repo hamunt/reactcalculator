@@ -33,9 +33,9 @@ button{
   outline: none;
   border: none;
 }
-button:hover{
+button:active {
   background: cadetblue;
-  
+  transform: translateY(5px);
 }
 #screen{
   grid-row: 2/3;
